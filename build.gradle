@@ -23,7 +23,7 @@ version = mod_version
 group = mod_group_id
 
 // 打包成 jar 时的名称
-base.archivesName = 'swapadoll'
+base.archivesName = 'displaydoll'
 
 // 需要的前置库，目前没有
 repositories {
