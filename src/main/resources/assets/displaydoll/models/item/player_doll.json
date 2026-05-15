@@ -31,8 +31,8 @@
       "scale": [0.75, 0.75, 0.75]
     },
     "head": {
-      "translation": [0, 12.25, 0],
-      "scale": [0.75, 0.75, 0.75]
+      "translation": [0, 14, 0],
+      "scale": [1, 1, 1]
     },
     "fixed": {
       "translation": [0, 0, -2]
