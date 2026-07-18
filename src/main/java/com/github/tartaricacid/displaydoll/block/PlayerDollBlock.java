@@ -54,8 +54,10 @@ public class PlayerDollBlock extends Block implements EntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if (level.isClientSide() && level.getBlockEntity(pos) instanceof PlayerDollBlockEntity blockEntity && player.isCreative() && !player.isSecondaryUseActive()) {
-            ScreenProxy.openPlayerDollScreen(blockEntity);
+        if (level.getBlockEntity(pos) instanceof PlayerDollBlockEntity blockEntity && player.isCreative() && !player.isSecondaryUseActive()) {
+            if (level.isClientSide()) {
+                ScreenProxy.openPlayerDollScreen(blockEntity);
+            }
             return InteractionResult.SUCCESS;
         }
         return super.useItemOn(itemStack, state, level, pos, player, hand, hitResult);
